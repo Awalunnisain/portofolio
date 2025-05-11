@@ -10,16 +10,11 @@
       darkMode: 'class',
     };
   </script>
-  <style>
-    body {
-      font-family: sans;
-    }
-  </style>
 </head>
-<body class="bg-white text-black dark:bg-black dark:text-white transition-colors duration-500 min-h-screen">
+<body class="bg-white text-black dark:bg-black dark:text-white font-sans transition-colors duration-500">
 
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-10 bg-black/60 backdrop-blur-md text-white dark:text-white border-b border-gray-700">
+  <header class="bg-black dark:bg-black/80 backdrop-blur-md fixed top-0 left-0 w-full z-10 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4">
         <div class="text-2xl font-bold">AWALUN NISA</div>
@@ -29,12 +24,10 @@
           <a href="skills.html" class="hover:text-blue-400">Skill</a>
           <a href="certificate.html" class="hover:text-blue-400">Certificate</a>
         </div>
-
-        <!-- Mode Toggle -->
-        <button id="theme-toggle" class="ml-4 text-xl">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="ml-4 text-2xl">
           🌙
         </button>
-
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
           <button id="menu-toggle" class="focus:outline-none">
@@ -62,8 +55,7 @@
         <h1 class="text-5xl font-bold">AWALUN <span class="text-blue-400">NISA</span></h1>
         <p class="mt-4 text-xl">IT Student</p>
         <div class="mt-6 space-x-4">
-          <a href="https://www.canva.com/design/DAGenVlabRc/14l4ttj6k7X1fFcr_oKxwg/edit?utm_content=DAGenVlabRc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-             class="border border-white text-white px-6 py-3 rounded hover:bg-blue-500 hover:text-black transition">
+          <a href="https://www.canva.com/design/DAGenVlabRc/14l4ttj6k7X1fFcr_oKxwg/edit?utm_content=DAGenVlabRc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="border border-white text-white px-6 py-3 rounded hover:bg-blue-500 hover:text-black transition">
             Curriculum Vitae
           </a>
         </div>
@@ -72,11 +64,13 @@
   </section>
 
   <!-- Footer -->
-  <footer class="fixed bottom-0 w-full bg-black text-center py-4 text-gray-400 text-sm z-30">
-    &copy; 2025 Awalun Nisa. All rights reserved.
+  <footer class="fixed bottom-0 w-full bg-black dark:bg-black text-center py-4 text-gray-400 text-sm z-30">
+    <div>
+      &copy; 2025 Awalun Nisa. All rights reserved.
+    </div>
   </footer>
 
-  <!-- Script: Mobile Menu -->
+  <!-- Script for mobile menu -->
   <script>
     const toggleBtn = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
@@ -85,12 +79,12 @@
     });
   </script>
 
-  <!-- Script: Theme Toggle -->
+  <!-- Script for theme toggle -->
   <script>
     const themeToggle = document.getElementById("theme-toggle");
     const htmlElement = document.documentElement;
 
-    // Load theme preference
+    // Set initial mode based on localStorage
     if (localStorage.theme === "light") {
       htmlElement.classList.remove("dark");
       themeToggle.textContent = "🌙";
@@ -99,6 +93,7 @@
       themeToggle.textContent = "🌞";
     }
 
+    // Toggle theme on button click
     themeToggle.addEventListener("click", () => {
       htmlElement.classList.toggle("dark");
       const isDark = htmlElement.classList.contains("dark");

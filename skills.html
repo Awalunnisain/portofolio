@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Awalun Nisa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-2xl font-bold">AWALUN NISA</div>
+        <div class="hidden md:flex space-x-6 text-lg">
+          <a href="home.html" class="hover:text-blue-400">Home</a>
+          <a href="aboutme.html" class="hover:text-blue-400">About Me</a>
+          <a href="skills.html" class="text-blue-400 font-semibold">Skill</a>
+          <a href="certificate.html" class="hover:text-blue-400">Certificate</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 pb-4">
+        <a href="home.html" class="block hover:text-blue-400">Home</a>
+        <a href="aboutme.html" class="block hover:text-blue-400">About Me</a>
+        <a href="skills.html" class="block text-blue-400 font-semibold">Skill</a>
+        <a href="certificate.html" class="block hover:text-blue-400">Certificate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Skills Section -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Skills</h2>
+  
+      <div class="grid grid-cols-1 gap-8 text-left">
+        <div class="bg-black  hover:bg-blue-400 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Network Configuration</h3>
+          <p class="text-white">Understanding basic network configuration, network topology, and subnetting.</p>
+        </div>
+  
+        <div class="bg-black hover:bg-blue-400 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Web Programing</h3>
+          <p class="text-white">Creating websites using HTML, CSS, and JavaScript.</p>
+        </div>
+  
+        <div class="bg-black hover:bg-blue-400 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">System Administrator</h3>
+          <p class="text-white">
+            Creating and managing websites using WordPress, including installing the platform, customizing themes and plugins, and optimizing site performance and appearance based on user needs. In addition, I am skilled in building and administering e-learning platforms with Moodle, involving tasks such as setting up courses, managing users, and configuring various learning activities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-4 text-gray-400 text-sm">
+    <div>&copy; 2025 Awalun Nisa. All rights reserved.</div>
+  </footer>
+
+  <!-- Script for mobile menu -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

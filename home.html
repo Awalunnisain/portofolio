@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awalun Nisa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+  <style>
+    body {
+      font-family: serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-black dark:bg-black dark:text-white transition-colors duration-500 min-h-screen">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-black fixed top-0 left-0 w-full z-10 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-2xl font-bold">AWALUN NISA</div>
+        <div class="hidden md:flex space-x-6 text-lg">
+          <a href="home.html" class="hover:text-blue-400">Home</a>
+          <a href="aboutme.html" class="hover:text-blue-400">About Me</a>
+          <a href="skills.html" class="hover:text-blue-400">Skill</a>
+          <a href="certificate.html" class="hover:text-blue-400">Certificate</a>
+        </div>
+
+        <!-- Mode Toggle -->
+        <button id="theme-toggle" class="ml-4 text-xl">
+          🌙
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 pb-4">
+        <a href="home.html" class="block hover:text-blue-400">Home</a>
+        <a href="aboutme.html" class="block hover:text-blue-400">About Me</a>
+        <a href="skills.html" class="block hover:text-blue-400">Skill</a>
+        <a href="certificate.html" class="block hover:text-blue-400">Certificate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-fixed" style="background-image: url('image/wawa.jpg');">
+    <div class="min-h-screen flex flex-col items-center justify-center bg-black/60 text-center px-4 pt-24">
+      <div class="bg-black bg-opacity-60 p-8 rounded-lg text-center">
+        <h1 class="text-5xl font-bold">AWALUN <span class="text-blue-400">NISA</span></h1>
+        <p class="mt-4 text-xl">IT Student</p>
+        <div class="mt-6 space-x-4">
+          <a href="https://www.canva.com/design/DAGenVlabRc/14l4ttj6k7X1fFcr_oKxwg/edit?utm_content=DAGenVlabRc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+             class="border border-white text-white px-6 py-3 rounded hover:bg-blue-500 hover:text-black transition">
+            Curriculum Vitae
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 w-full bg-black text-center py-4 text-gray-400 text-sm z-30">
+    &copy; 2025 Awalun Nisa. All rights reserved.
+  </footer>
+
+  <!-- Script: Mobile Menu -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Script: Theme Toggle -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const htmlElement = document.documentElement;
+
+    // Load theme preference
+    if (localStorage.theme === "light") {
+      htmlElement.classList.remove("dark");
+      themeToggle.textContent = "🌙";
+    } else {
+      htmlElement.classList.add("dark");
+      themeToggle.textContent = "🌞";
+    }
+
+    themeToggle.addEventListener("click", () => {
+      htmlElement.classList.toggle("dark");
+      const isDark = htmlElement.classList.contains("dark");
+      localStorage.theme = isDark ? "dark" : "light";
+      themeToggle.textContent = isDark ? "🌞" : "🌙";
+    });
+  </script>
+
+</body>
+</html>

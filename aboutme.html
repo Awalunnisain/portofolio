@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me - Awalun Nisa</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-    };
-  </script>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="min-h-screen flex flex-col bg-white text-black dark:bg-[#1f2937] dark:text-white font-sans transition-colors duration-500">
@@ -90,14 +86,12 @@
     <div>&copy; 2025 Awalun Nisa. All rights reserved.</div>
   </footer>
 
-  <!-- Script Mobile Menu -->
-  <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
+ <script>
+  const toggleDark = document.getElementById('toggle-dark');
+  toggleDark.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+  });
+</script>
 
 </body>
 </html>

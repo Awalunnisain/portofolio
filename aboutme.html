@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me - Awalun Nisa</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-  
+<body class="min-h-screen flex flex-col bg-white text-black dark:bg-[#1f2937] dark:text-white font-serif transition-colors duration-500">
+
   <!-- Navbar -->
   <header class="bg-gray-100 dark:bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +25,7 @@
           <a href="skills.html" class="hover:text-blue-400">Skill</a>
           <a href="certificate.html" class="hover:text-blue-400">Certificate</a>
         </div>
-        
+
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
           <button id="menu-toggle" class="focus:outline-none">
@@ -58,7 +63,7 @@
     </section>
 
     <!-- Sosmed -->
-    <div class="flex items-center justify-center mt-8 bg-transparent">
+    <div class="flex items-start justify-center py-16 bg-gray-100 dark:bg-gray-800">
       <div class="flex space-x-8 text-black dark:text-white text-lg">
         <a href="https://wa.me/6285704412030" target="_blank" class="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
           <i class="fab fa-whatsapp text-xl"></i>
@@ -85,12 +90,14 @@
     <div>&copy; 2025 Awalun Nisa. All rights reserved.</div>
   </footer>
 
- <script>
-  const toggleDark = document.getElementById('toggle-dark');
-  toggleDark.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-  });
-</script>
+  <!-- Script Mobile Menu -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>

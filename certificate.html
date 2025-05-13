@@ -95,28 +95,20 @@
       menu.classList.toggle('hidden');
     });
 
-    // Dark mode toggle + localStorage
+    // Dark mode toggle
     const themeToggle = document.getElementById('theme-toggle');
     const htmlEl = document.documentElement;
 
-    // Set initial theme from localStorage
     if (localStorage.getItem('theme') === 'light') {
       htmlEl.classList.remove('dark');
-      themeToggle.textContent = '☀️';
-    } else {
-      htmlEl.classList.add('dark');
-      themeToggle.textContent = '🌙';
     }
 
-    // Toggle theme
     themeToggle.addEventListener('click', () => {
       htmlEl.classList.toggle('dark');
       if (htmlEl.classList.contains('dark')) {
         localStorage.setItem('theme', 'dark');
-        themeToggle.textContent = '🌙';
       } else {
         localStorage.setItem('theme', 'light');
-        themeToggle.textContent = '☀️';
       }
     });
   </script>

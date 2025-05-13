@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Certificate - Awalun Nisa</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    };
-  </script>
+
 </head>
 <body class="bg-white dark:bg-[#1f2937] text-gray-900 dark:text-white font-sans transition-colors duration-300">
 
@@ -83,41 +79,6 @@
   <footer class="bg-gray-100 dark:bg-black text-center py-4 text-gray-600 dark:text-gray-400 text-sm transition-colors duration-300">
     <div>&copy; 2025 Awalun Nisa. All rights reserved.</div>
   </footer>
-
-  <!-- Script -->
-  <script>
-    // Toggle menu mobile
-    const toggleBtn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    // Dark mode toggle + localStorage
-    const themeToggle = document.getElementById('theme-toggle');
-    const htmlEl = document.documentElement;
-
-    // Set initial theme from localStorage
-    if (localStorage.getItem('theme') === 'light') {
-      htmlEl.classList.remove('dark');
-      themeToggle.textContent = '☀️';
-    } else {
-      htmlEl.classList.add('dark');
-      themeToggle.textContent = '🌙';
-    }
-
-    // Toggle theme
-    themeToggle.addEventListener('click', () => {
-      htmlEl.classList.toggle('dark');
-      if (htmlEl.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-        themeToggle.textContent = '🌙';
-      } else {
-        localStorage.setItem('theme', 'light');
-        themeToggle.textContent = '☀️';
-      }
-    });
-  </script>
 
 </body>
 </html>

@@ -104,26 +104,5 @@
     });
   </script>
 
-  <!-- Script Theme Toggle -->
-  <script>
-    const themeToggle = document.getElementById("theme-toggle");
-    const htmlElement = document.documentElement;
-
-    if (localStorage.theme === "light") {
-      htmlElement.classList.remove("dark");
-      themeToggle.textContent = "🌙";
-    } else {
-      htmlElement.classList.add("dark");
-      themeToggle.textContent = "🌞";
-    }
-
-    themeToggle.addEventListener("click", () => {
-      htmlElement.classList.toggle("dark");
-      const isDark = htmlElement.classList.contains("dark");
-      localStorage.theme = isDark ? "dark" : "light";
-      themeToggle.textContent = isDark ? "🌞" : "🌙";
-    });
-  </script>
-
 </body>
 </html>

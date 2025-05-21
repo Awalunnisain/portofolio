@@ -1,89 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Certificate - Awalun Nisa</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#1f2937] text-white font-sans">
 
-  <!-- Navbar -->
-  <header class="bg-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <div class="text-2xl font-bold">AWALUN NISA</div>
-        <div class="hidden md:flex space-x-6 text-lg">
-          <a href="home.html" class="hover:text-blue-400">Home</a>
-          <a href="aboutme.html" class="hover:text-blue-400">About Me</a>
-          <a href="skills.html" class="hover:text-blue-400">Skill</a>
-          <a href="certificate.html" class="text-blue-400 font-semibold">Certificate</a>
-        </div>
-        <div class="md:hidden">
-          <button id="menu-toggle" class="focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
+<body class="bg-gray-900 text-white font-sans">
+
+<!-- Navbar -->
+<header class="bg-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="text-2xl font-bold">AWALUN NISA</div>
+      <div class="hidden md:flex space-x-6 text-lg">
+        <a href="home.html" class="hover:text-blue-400">Home</a>
+        <a href="aboutme.html" class="hover:text-blue-400">About Me</a>
+        <a href="skills.html" class="hover:text-blue-400">Skill</a>
+        <a href="certificate.html" class="hover:text-blue-400">Certificate</a>
       </div>
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 pb-4">
-        <a href="home.html" class="block hover:text-blue-400">Home</a>
-        <a href="aboutme.html" class="block hover:text-blue-400">About Me</a>
-        <a href="skills.html" class="block hover:text-blue-400">Skill</a>
-        <a href="certificate.html" class="block text-blue-400 font-semibold">Certificate</a>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
-  </header>
-
-   <!-- Certificate Section -->
-  <section class="py-16 px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Certificate</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
-      <!-- Sertifikat Cards -->
-      <div class="bg-black p-4 rounded-lg text-center hover:bg-blue-400 transition">
-        <img src="sertif 1.png" alt="Sertifikat 1" class="w-full h-28 object-cover rounded mb-2">
-        <p class="font-semibold text-xs">FCF-Technical Introduction to Cybersecurity 1.0</p>
-      </div>
-      <div class="bg-black p-4 rounded-lg text-center hover:bg-blue-400 transition">
-        <img src="sertif 2.png" alt="Sertifikat 2" class="w-full h-28 object-cover rounded mb-2">
-        <p class="font-semibold text-xs">Fortinet FCF-Getting Started In Cybersecurity 2.0</p>
-      </div>
-      <div class="bg-black p-4 rounded-lg text-center hover:bg-blue-400 transition">
-        <img src="sertif 3.png" alt="Sertifikat 3" class="w-full h-28 object-cover rounded mb-2">
-        <p class="font-semibold text-xs">FCF-Introduction to the Threat Landscape 2.0</p>
-      </div>
-      <div class="bg-black p-4 rounded-lg text-center hover:bg-blue-400 transition">
-        <img src="sertif 4.png" alt="Sertifikat 4" class="w-full h-28 object-cover rounded mb-2">
-        <p class="font-semibold text-xs">Red Hat System Administration (RH124)</p>
-      </div>
-      <div class="bg-black p-4 rounded-lg text-center hover:bg-blue-400 transition">
-        <img src="sertif 5.jpg" alt="Sertifikat 5" class="w-full h-28 object-cover rounded mb-2">
-        <p class="font-semibold text-xs">Red Hat System Administration (RH104)</p>
-      </div>
-      <div class="bg-black p-4 rounded-lg text-center hover:bg-blue-400 transition">
-        <img src="sertif 6.png" alt="Sertifikat 6" class="w-full h-28 object-cover rounded mb-2">
-        <p class="font-semibold text-xs">Always Ngoding-JavaScript</p>
-      </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 pb-4">
+      <a href="home.html" class="block hover:text-blue-400">Home</a>
+      <a href="aboutme.html" class="block hover:text-blue-400">About Me</a>
+      <a href="skills.html" class="block hover:text-blue-400">Skill</a>
+      <a href="certificate.html" class="block hover:text-blue-400">Certificate</a>
     </div>
-  </section>
+  </div>
+</header>
 
+<!-- Certificate Section -->
+<section class="py-20 px-4">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold">My <span class="text-blue-500">Certificates</span></h2>
+    <p class="text-white mt-4 max-w-2xl mx-auto">
+      Berikut adalah beberapa sertifikat yang telah saya raih dalam bidang IT dan desain.
+    </p>
+  </div>
 
-  <!-- Footer -->
-  <footer class="bg-black text-center py-4 text-gray-400 text-sm">
-    <div>&copy; 2025 Awalun Nisa. All rights reserved.</div>
-  </footer>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Card 1 -->
+    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+  <img src="image/sertif 1.png" alt="Sertifikat 1" class="w-full h-48 object-cover">
+  <div class="p-4 flex justify-between items-center">
+    <h3 class="text-lg font-semibold">FCF Technical Introduction to Cybersecurity 1.0</h3>
+    <a href="https://drive.google.com/file/d/1ltqx5cCRssnActaTaNbeNhfiVDl60GAY/view?usp=drive_link" target="_blank"
+       class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-200 transition">
+      <span>&rarr;</span>
+    </a>
+  </div>
+</div>
 
-  <!-- Script for mobile menu -->
-  <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
+    <!-- Card 2 -->
+    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+  <img src="image/sertif 2.png" alt="Sertifikat 2" class="w-full h-48 object-cover">
+  <div class="p-4 flex justify-between items-center">
+    <h3 class="text-lg font-semibold">FCF Getting Started In Cybersecurity 2.0</h3>
+    <a href="https://drive.google.com/file/d/1dUViL5viHFT-gQPK1QZ1UlsSeosg1nX6/view?usp=sharing" target="_blank" 
+       class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-200 transition">
+      <span>&rarr;</span>
+    </a>
+  </div>
+</div>
+
+    <!-- Card 3 -->
+<div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+  <img src="image/sertif 4.png" alt="Sertifikat 3" class="w-full h-48 object-cover">
+  <div class="p-4 flex justify-between items-center">
+    <h3 class="text-lg font-semibold">Red Hat System Administrator RH124</h3>
+    <a href="https://drive.google.com/file/d/1mkBzBTa6zkOjjdpqX56TKpa3AXbtcI_q/view?usp=drive_link" target="_blank"
+       class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-200 transition">
+      <span>&rarr;</span>
+    </a>
+  </div>
+</div>
+
+  <div class="text-center mt-12">
+    <a href="https://drive.google.com/drive/folders/1kYJX1g6STVNdCfLHb873-0uGsO-7FzfS?usp=sharing" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-200 transition">
+      See All →
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-center py-4 text-gray-400 text-sm">
+  &copy; 2025 Awalun Nisa. All rights reserved.
+</footer>
+
+<!-- Script: Mobile Menu -->
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
